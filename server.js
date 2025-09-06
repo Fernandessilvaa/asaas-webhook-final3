@@ -2,7 +2,7 @@ const express = require("express");
 const app = express();
 app.use(express.json());
 
-const ASAAS_TOKEN = process.env.ASAAS_WEBHOOK_TOKEN || "meu_token_teste";
+const ASAAS_TOKEN = "meu_token_teste";
 
 // Rota ping para UptimeRobot
 app.get("/ping", (req, res) => {
