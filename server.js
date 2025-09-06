@@ -4,6 +4,11 @@ app.use(express.json());
 
 const ASAAS_TOKEN = process.env.ASAAS_WEBHOOK_TOKEN || "meu_token_teste";
 
+// Rota ping para UptimeRobot
+app.get("/ping", (req, res) => {
+  res.status(200).send("pong");
+});
+
 app.get("/healthz", (req, res) => res.status(200).send("Servidor rodando 🚀"));
 
 app.post("/webhook/asaas", (req, res) => {
